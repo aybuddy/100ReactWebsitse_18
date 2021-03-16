@@ -14,8 +14,20 @@ function App() {
       </div>
 
       <div className='app__videos'>
-        {/* container of app videos (scrollable) */}
-        <VideoCard />
+        <VideoCard
+          channel='our planet'
+          avatarSrc='https://www.pexels.com/video/coffee-cup-photography-easter-6496005/'
+          song='Test Song '
+          url='/Videos/video.mp4'
+          likes={950}
+          shares={30}
+          // channel={channel}
+          // avatarSrc={avatarSrc}
+          // song={song}
+          // url={url}
+          // likes={likes}
+          // shares={shares}
+        />
         <VideoCard />
         <VideoCard />
       </div>

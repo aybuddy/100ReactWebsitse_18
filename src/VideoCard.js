@@ -1,8 +1,9 @@
 import React, { useRef, useState } from 'react';
 import './VideoCard.css';
+import VideoFooter from './VideoFooter';
 import VideoHeader from './VideoHeader';
 
-const VideoCard = () => {
+const VideoCard = ({ channel, url, likes, shares, avatarSrc, song }) => {
   const [isVideoPlaying, setIsVideoPlaying] = useState(false);
   const videoRef = useRef(null);
 
@@ -25,7 +26,7 @@ const VideoCard = () => {
         ref={videoRef}
         onClick={onVideoPress}
         className='videoCard__player'
-        src='./Videos/video.mp4'
+        src={url}
         // src='/public/Videos/eggs.mp4'
         // src='https://www.pexels.com/video/black-and-white-footage-of-people-854178/'
         loop
@@ -33,6 +34,13 @@ const VideoCard = () => {
       >
         Video component
       </video>
+      <VideoFooter
+        channel={channel}
+        avatarSrc={avatarSrc}
+        song={song}
+        likes={likes}
+        shares={shares}
+      />
     </div>
   );
 };
