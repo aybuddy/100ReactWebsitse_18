@@ -1,5 +1,6 @@
 import React, { useRef, useState } from 'react';
 import './VideoCard.css';
+import VideoHeader from './VideoHeader';
 
 const VideoCard = () => {
   const [isVideoPlaying, setIsVideoPlaying] = useState(false);
@@ -19,6 +20,7 @@ const VideoCard = () => {
 
   return (
     <div className='videoCard'>
+      <VideoHeader />
       <video
         ref={videoRef}
         onClick={onVideoPress}
